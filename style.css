@@ -18,7 +18,7 @@
 
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 2% 6%; /*rule applies 2% padding to the top and bottom and 6% padding to the left and right of the element. This creates an equal amount of padding on all sides, but the amount of padding will be proportional to the size of the element's dimensions.*/
     justify-content: space-between;
     align-items: center;
    
@@ -129,3 +129,102 @@ nav .fa{
     }
 }
 /* -----------------------------------------------------------------------------------*/
+
+
+/*--------course----- */
+
+.course{
+   width: 80%;
+   text-align: center;
+    margin: auto;
+    padding-top:100px ;
+}
+h1{
+    font-size:36px ;
+    font-weight: 600;
+   
+}
+p{
+     color: #4d4747;
+     font-size: 14px;
+     font-weight: 300;
+     line-height: 22px;
+     padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.course-col{
+    flex-basis: 31%;
+     background: #ebe3e3;
+     border-radius: 10px;
+     margin-bottom: 5%;
+     padding: 20px 12px;
+     box-sizing: border-box;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(1, 1, 1, 0.4);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*campus----------------------*/
+.campus{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+background:rgba(226,0,0,0.7) ;
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+    opacity: 0;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
